@@ -1,66 +1,260 @@
- 
-  
-
-
- aside{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 15px;
-    padding: 20px;
-    background-color: #000000;
-    border-right: 1px solid #6b6b6b;
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-
- }
- .foto img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fafafa;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.foto img:hover {
- transform: scale(1.08);
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #000000;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+aside {
+    width: 300px;
+    background-color: #0a0a0a;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.foto {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    margin-bottom: 15px;
 }
 
 .nome {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fffbfb;
-  text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
 }
+
 .menu ul {
-  list-style: none;
-  padding: 4px;
-  margin: 2px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-.menu ul :hover{
-   transform: scale(1.08);
+    list-style: none;
+    margin-bottom: 40px;
 }
 
 .menu li {
-  margin: 15px 0;
+    margin-bottom: 15px;
 }
+
 .menu a {
-  display: block;
-  padding: 10px 20px;
-  border: 2px solid #ece1e1;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #eeecec;
-  font-weight: bold;
-  transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .menu a:hover {
-  color: #000000;
-  background-color: #fbfdff;
-  border-color: #ffffff;
+    background-color: #fefdff;
+    padding-left: 15px;
+    color: black;
 }
+
+.menu i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contato-box {
+    background-color: rgb(49, 48, 48);
+    padding: 15px;
+    margin: 0.5px;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+.contato-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #f1e0e0;
+}
+
+.contato-box p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+   
+
+}
+
+
+.contato-box i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.contato-box a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contato-box a:hover { /* esseeeeeeeeeee*/
+    background-color: white;
+     padding-left: 5px;
+    color: #000000;
+    border-radius: 5px;
+}
+
+/* Conteúdo Principal */
+main {
+    margin-left: 300px;
+    padding: 40px;
+    width: calc(100% - 300px);
+}
+
+section {
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 { /*  */
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000000;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Seção de Projetos */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projeto-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-card h3 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+
+
+
+.form-group {
+    margin-bottom: 20px;
+}   
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+ /* ANIMAÇÃO "LEVANTAR" */
+#sobre.animar {
+  animation: levantar 0.5s ease;
+}
+
+@keyframes levantar {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+/* ANIMAÇÃO PARA PROJETOS */
+#projetos.animar {
+  animation: levantar 0.5s ease;
+}
+
+
+
+#projetos h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #2ecc71; /* Cor diferente para diferenciar */
+}
+/* ANIMAÇÃO PARA CONTATO */
+#contato.animar {
+  animation: levantar 0.5s ease;
+}
+
+/* ESTILO DA LINHA DO TÍTULO */
+#contato h3 {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#contato h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 270%;
+  height: 3px;
+  background: #f7f7f7; /* Vermelho para destacar */
+}
+
