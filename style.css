@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -255,6 +255,6 @@ p {
   left: 0;
   width: 270%;
   height: 3px;
-  background: #f7f7f7; /* Vermelho para destacar */
+  background: #f7f7f7; 
 }
 
